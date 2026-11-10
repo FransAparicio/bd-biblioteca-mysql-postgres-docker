@@ -39,7 +39,7 @@ WHERE
 
     SELECT * FROM autores WHERE estado = true
 
-    9. Mostrar los libros publicados despues del año 2019
+9. Mostrar los libros publicados despues del año 2019
 select * 
 from libros
 where anio_publicacion > 2019;
@@ -48,9 +48,22 @@ AND, OR, NOT
 
 10 Mostrar los libros que pertenecen a la categoria 1 y fueron publicados despues del año 2020
 
+select * 
+from libros
+where anio_publicacion > 2020
+AND categoria_id = 1;
+
 11 Mostrar los libros que pertenecen a la categoria 1 o a la categoria 2
 
+    select * 
+    from libros
+    where categoria_id in (1, 2);
+
 12 Mostrar todos los autores que no se encuentran activos
+
+    select * 
+    from autores
+    where estado = false;
 
 ORDER BY
 
